@@ -6,9 +6,10 @@ import requests from "../utils/request";
 import { Movie } from "../typings";
 import useAuth from "../hooks/useAuth";
 import { useRecoilValue } from "recoil";
-import type { NextPage } from "next";
 import { modalState } from "../atoms/modalAtom";
 import Modal from "../components/Modal";
+import type { NextPage } from "next";
+import React from "react";
 
 interface Props {
   netflixOriginals: Movie[];
@@ -41,7 +42,7 @@ Props) => {
   return (
     <div className="relative h-screen bg-gradient-to-b lg:h-[140vh]">
       <Head>
-        <title>Create Next App</title>
+        <title>Netflix</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />

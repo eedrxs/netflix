@@ -1,11 +1,13 @@
 import "../styles/globals.css";
+import React from "react";
+import type { AppProps } from "next/app";
 import { AuthProvider } from "../hooks/useAuth";
 import { RecoilRoot } from "recoil";
-import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <RecoilRoot>
+      {/* Higher Order Component */}
       <AuthProvider>
         <Component {...pageProps} />
       </AuthProvider>
